@@ -6,11 +6,20 @@ const Mail = require('./mail');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Configure CORS
+const corsOptions = {
+    origin: 'https://portfolio-6jw9.vercel.app', // Replace with your frontend URL
+    methods: 'GET, POST, PUT, DELETE',
+    allowedHeaders: 'Content-Type, Authorization'
+};
+
+app.use(cors(corsOptions));
 app.use(express.json()); // Ensure you can parse JSON payloads
-app.get("/",(req,res)=>{
+
+app.get("/", (req, res) => {
     res.send("Hello World");
-})
+});
+
 app.post('/send-email', (req, res) => {
     const { user_name, user_email, message } = req.body;
 

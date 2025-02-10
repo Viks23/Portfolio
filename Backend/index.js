@@ -53,4 +53,4 @@ app.post('/send-email', (req, res) => {
     res.status(200).json({ message: 'Email sent successfully!' });
 });
 
-app.listen(PORT, () => console.log(`App Listening at ${PORT}`));
+app.listen(PORT, () => console.log(`App Listening at http://localhost:${PORT}`));

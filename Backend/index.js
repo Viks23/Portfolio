@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // Configure CORS
 const corsOptions = {
     origin: 'https://portfolio-6jw9.vercel.app', // Replace with your frontend URL
-    methods: 'GET, POST, PUT, DELETE',
+    methods: 'GET, POST, PUT, DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Authorization'
 };
 

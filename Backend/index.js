@@ -24,6 +24,9 @@ app.post('/send-email', async (req, res) => {
     try {
         const { user_name, user_email, message } = req.body;
 
+        // Log request body
+        console.log('Request Body:', req.body);
+
         const mail = new Mail();
         mail.setTo(user_email);
         mail.setSubject("Welcome to UpSkillMafia – Let's Build Something Amazing!");
@@ -62,6 +65,9 @@ app.post('/send-email', async (req, res) => {
         `);
         
         await mail.send();
+
+        // Log success
+        console.log('Email sent successfully!');
         res.status(200).json({ message: 'Email sent successfully!' });
     } catch (error) {
         console.error('Error sending email:', error);

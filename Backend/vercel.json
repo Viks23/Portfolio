@@ -10,7 +10,10 @@
       {
         "src": "/(.*)",
         "dest": "/",
-        "methods":["GET","POST","PUT","DELETE"]
+        "methods":["GET","POST","PUT","DELETE"],
+        "headers":{
+          "Access-Control-Allow-Origin":"https://portfolio-6jw9.vercel.app"
+        }
       }
     ]
   }

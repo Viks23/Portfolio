@@ -16,7 +16,7 @@ const Contact = () => {
       message: formData.get('message')
     };
 
-    axios.post('https://portfolio-oqu3.vercel.app/send-email', data)
+    axios.post('https://portfolio-6jw9.vercel.app/send-email', data)
       .then(response => {
         setIsSubmitted(true);
         // Reset form fields
